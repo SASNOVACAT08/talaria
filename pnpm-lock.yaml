@@ -9,6 +9,7 @@ importers:
       '@nrwl/nx-cloud': ^15.0.2
       commitizen: ^4.2.6
       cz-conventional-changelog: ^3.3.0
+      husky: ^8.0.3
       nx: 15.4.4
       prettier: ^2.6.2
       vitepress: 1.0.0-alpha.35
@@ -20,6 +21,7 @@ importers:
       '@commitlint/config-conventional': 17.4.0
       commitizen: 4.2.6_@types+node@18.11.18
       cz-conventional-changelog: 3.3.0_@types+node@18.11.18
+      husky: 8.0.3
       nx: 15.4.4
       prettier: 2.8.1
       vitepress: 1.0.0-alpha.35_j73j5xdbzpkigstapj6vkce2xy
@@ -1766,6 +1768,12 @@ packages:
   /human-signals/2.1.0:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
+    dev: true
+
+  /husky/8.0.3:
+    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /iconv-lite/0.4.24:
