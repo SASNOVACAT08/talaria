@@ -7,18 +7,34 @@
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "commitlint": "commitlint",
+    "cz": "cz",
+    "prepare": "husky install"
   },
   "private": true,
+  "dependencies": {
+    "@nrwl/nx-cloud": "^15.0.2"
+  },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.0",
+    "@commitlint/config-conventional": "^17.4.0",
     "@testing-library/dom": "^8.19.1",
     "@vitest/coverage-c8": "^0.26.3",
     "@vue/test-utils": "^2.2.7",
+    "commitizen": "^4.2.6",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.3",
     "jsdom": "^20.0.3",
     "nx": "15.4.4",
     "prettier": "^2.6.2",
     "vitepress": "1.0.0-alpha.35",
     "vitest": "^0.26.3",
     "vue": "^3.2.45"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
