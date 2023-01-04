@@ -5,15 +5,28 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "docs:serve": "vitepress serve docs",
+    "commitlint": "commitlint",
+    "cz": "cz",
+    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {
+    "@nrwl/nx-cloud": "^15.0.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.0",
+    "@commitlint/config-conventional": "^17.4.0",
+    "commitizen": "^4.2.6",
+    "cz-conventional-changelog": "^3.3.0",
     "nx": "15.4.4",
     "prettier": "^2.6.2",
     "vitepress": "1.0.0-alpha.35",
     "vue": "^3.2.45"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
