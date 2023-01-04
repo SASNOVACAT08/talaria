@@ -8,9 +8,9 @@
     "docs:serve": "vitepress serve docs"
   },
   "private": true,
-  "dependencies": {
-  },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.0",
+    "@commitlint/config-conventional": "^17.4.0",
     "nx": "15.4.4",
     "prettier": "^2.6.2",
     "vitepress": "1.0.0-alpha.35",
