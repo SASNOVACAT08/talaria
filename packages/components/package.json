@@ -1,9 +1,8 @@
 {
   "name": "@talaria/components",
   "version": "0.0.0",
-  "devDependencies": {},
   "scripts": {
     "build": ""
   },
-  "dependencies": {}
+  "type": "module"
 }

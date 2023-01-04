@@ -5,15 +5,20 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "docs:serve": "vitepress serve docs",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "private": true,
-  "dependencies": {
-  },
   "devDependencies": {
+    "@testing-library/dom": "^8.19.1",
+    "@vitest/coverage-c8": "^0.26.3",
+    "@vue/test-utils": "^2.2.7",
+    "jsdom": "^20.0.3",
     "nx": "15.4.4",
     "prettier": "^2.6.2",
     "vitepress": "1.0.0-alpha.35",
+    "vitest": "^0.26.3",
     "vue": "^3.2.45"
   }
 }
