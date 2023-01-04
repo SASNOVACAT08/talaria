@@ -8,6 +8,9 @@
     "docs:serve": "vitepress serve docs"
   },
   "private": true,
+  "dependencies": {
+    "@nrwl/nx-cloud": "^15.0.2"
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.4.0",
     "@commitlint/config-conventional": "^17.4.0",
