@@ -40,3 +40,6 @@ Thumbs.db
 
 # VitePress
 cache
+
+# NX Cloud
+nx-cloud.env

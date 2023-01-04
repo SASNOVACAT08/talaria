@@ -9,6 +9,7 @@
   },
   "private": true,
   "dependencies": {
+    "@nrwl/nx-cloud": "^15.0.2"
   },
   "devDependencies": {
     "nx": "15.4.4",
