@@ -8,7 +8,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <html :lang="lang">
-
+  <html :lang="props.lang">
+    <slot />
   </html>
 </template>
