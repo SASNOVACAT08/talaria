@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps({
+defineProps({
   lang: {
     type: String,
     default: 'en',
@@ -8,7 +8,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <html :lang="props.lang">
+  <html :lang="lang">
     <slot />
   </html>
 </template>
