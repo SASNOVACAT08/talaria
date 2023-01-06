@@ -1,0 +1,9 @@
+{
+  "name": "@talaria/render",
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "scripts": {},
+  "dependencies": {
+    "vue": "^3.2.45"
+  }
+}
