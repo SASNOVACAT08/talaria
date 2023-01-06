@@ -18,4 +18,13 @@ describe('Html.vue', () => {
     const html = wrapper.html().trim().replace(/\n/g, "");
     expect(html).toBe('<html lang="fr"></html>');
   })
+  
+  it('should render with <p>', () => {
+    const wrapper = mount(Html, {
+      slots: {
+        default: '<p>Hello World</p>',
+      },
+    })
+    expect(wrapper.find('p').text()).toContain('Hello World')
+  })
 })
