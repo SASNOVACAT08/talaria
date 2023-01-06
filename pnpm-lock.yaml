@@ -46,6 +46,12 @@ importers:
       vite: 4.0.4
       vue-tsc: 1.0.20_typescript@4.9.4
 
+  packages/render:
+    specifiers:
+      vue: ^3.2.45
+    dependencies:
+      vue: 3.2.45
+
   test/components:
     specifiers:
       '@talaria/components': workspace:*
@@ -54,6 +60,18 @@ importers:
       happy-dom: ^8.1.2
     devDependencies:
       '@talaria/components': link:../../packages/components
+      '@vitejs/plugin-vue': 4.0.0_vite@4.0.4+vue@3.2.45
+      '@vue/test-utils': 2.2.7_vue@3.2.45
+      happy-dom: 8.1.2
+
+  test/render:
+    specifiers:
+      '@talaria/render': workspace:*
+      '@vitejs/plugin-vue': ^4.0.0
+      '@vue/test-utils': ^2.2.7
+      happy-dom: ^8.1.2
+    devDependencies:
+      '@talaria/render': link:../../packages/render
       '@vitejs/plugin-vue': 4.0.0_vite@4.0.4+vue@3.2.45
       '@vue/test-utils': 2.2.7_vue@3.2.45
       happy-dom: 8.1.2
