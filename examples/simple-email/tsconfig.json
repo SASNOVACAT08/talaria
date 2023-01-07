@@ -4,5 +4,5 @@
     "lib": ["ESNext", "DOM"],
     "allowJs": true
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "vite-env.d.ts", "types/**/*.d.ts", "src/index.ts", "src/index.ts"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "vite-env.d.ts", "types/**/*.d.ts", "src/index.ts", "src/index.ts"]
 }

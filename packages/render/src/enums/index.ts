@@ -1,5 +1,3 @@
-import { RenderOutput } from "./RenderOutput";
+import { RenderOutput } from './RenderOutput';
 
-export { 
-  RenderOutput
-}
+export { RenderOutput };

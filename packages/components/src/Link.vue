@@ -6,7 +6,7 @@ const props = defineProps({
     type: String,
     default: '#',
   },
-  ref: {
+  rel: {
     type: String,
     default: 'noreferrer',
   },
@@ -28,7 +28,7 @@ const style = computed(() => ({
 </script>
 
 <template>
-  <a :href="href" :ref="ref" :target="target" :style="style">
+  <a :rel="rel" :href="href" :target="target" :style="style">
     <slot />
   </a>
 </template>
