@@ -1,12 +1,16 @@
 import { describe, it, expect } from 'vitest'
 import { render, RenderOutput } from '@talaria/render'
 import { readFileSync, unlinkSync } from 'fs'
+import { defineComponent, inject } from 'vue'
 
 describe('render', () => {
   it('should render a string', async () => {
+    const component = defineComponent({
+      template: '<div>Hello World</div>',
+    })
     const rendered = await render({
       data: {},
-      template: '<div>Hello World</div>',
+      template: component,
       config: {
         output: RenderOutput.STRING,
       }
@@ -15,11 +19,18 @@ describe('render', () => {
   })
 
   it('should render a string with <p> and message', async () => {
+    const component = defineComponent({
+      setup: () => {
+        const msg = inject('msg')
+        return { msg }
+      },
+      template: '<p>{{ msg }}</p>',
+    })
     const rendered = await render({
       data: {
         msg: 'Hello World',
       },
-      template: '<p>{{ msg }}</p>',
+      template: component,
       config: {
         output: RenderOutput.STRING,
       }
@@ -28,9 +39,12 @@ describe('render', () => {
   })
 
   it('should render a file', async () => {
+    const component = defineComponent({
+      template: '<div>Hello World</div>',
+    })
     const path = await render({
       data: {},
-      template: '<div>Hello World</div>',
+      template: component,
       config: {
         output: RenderOutput.FILE,
         path: 'render-test',
@@ -42,11 +56,18 @@ describe('render', () => {
   })
 
   it('should render a file with <p> and message', async () => {
+    const component = defineComponent({
+      setup: () => {
+        const msg = inject('msg')
+        return { msg }
+      },
+      template: '<p>{{ msg }}</p>',
+    })
     const path = await render({
       data: {
         msg: 'Hello World',
       },
-      template: '<p>{{ msg }}</p>',
+      template: component,
       config: {
         output: RenderOutput.FILE,
         path: 'render-p-test',
