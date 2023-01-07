@@ -5,10 +5,14 @@
     "test": "vitest",
     "coverage": "vitest --coverage"
   },
+  "dependencies": {
+    "@talaria/components": "workspace:*"
+  },
   "devDependencies": {
-    "@talaria/components": "workspace:*",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/test-utils": "^2.2.7",
-    "happy-dom": "^8.1.2"
+    "happy-dom": "^8.1.2",
+    "typescript": "^4.9.4",
+    "vitest": "^0.26.3"
   }
 }
