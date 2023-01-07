@@ -1,4 +1,4 @@
-import { RenderOutput } from "../enums";
+import { RenderOutput } from '../enums';
 
 export interface RenderConfig {
   output: RenderOutput;

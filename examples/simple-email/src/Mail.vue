@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { Html, Body } from '@talaria/components'
+import { Html, Body } from '@talaria/components';
 import { defineComponent, inject } from 'vue';
 defineComponent({
   components: {
     Html,
-    Body
+    Body,
   },
 });
-const lang = inject<string>('lang', 'en')
+const lang = inject<string>('lang', 'en');
 </script>
 
 <template>
