@@ -1,14 +1,25 @@
 {
   "name": "@talaria/components",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
-  "main": "src/index.ts",
-
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/components.umd.js",
+  "module": "./dist/components.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/components.es.js",
+      "require": "./dist/components.umd.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "vue-tsc && vite build"
   },
   "dependencies": {
+    "rollup-plugin-typescript2": "^0.34.1",
     "vue": "^3.2.45"
   },
   "devDependencies": {
