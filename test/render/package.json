@@ -2,8 +2,7 @@
   "name": "@talaria/test-render",
   "private": true,
   "scripts": {
-    "test": "vitest",
-    "coverage": "vitest --coverage"
+    "test": "vitest"
   },
   "dependencies": {
     "@talaria/render": "workspace:*",
