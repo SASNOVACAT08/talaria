@@ -1,7 +1,7 @@
 import chalk from 'chalk';
 import { exec } from 'child_process';
-import ora from 'ora';
-import { dots } from 'cli-spinners';
+import { unlink } from 'fs';
+import spinner from '../utils/spinner';
 
 export default class Build {
   static command = 'build';
@@ -12,33 +12,25 @@ export default class Build {
   };
 
   static handler = () => {
-    const spinner = ora({
-      text: 'Building project',
-      spinner: dots,
-    }).start();
-    let i = 0;
-    const interval = setInterval(() => {
-      spinner.text = chalk.blue(`Building project ${'.'.repeat(i)}`);
-      i++;
-      if (i > 3) {
-        i = 0;
-      }
-    }, 200);
+    spinner.start('Building project');
     exec(
       './node_modules/.bin/vite build --config ./node_modules/@talaria/cli/vite.build.ts',
-      (error, stdout, stderr) => {
-        spinner.stop();
-        clearInterval(interval);
-        if (error) {
-          console.log(chalk.red(`Do you have vite installed?`));
-          return;
-        }
-        if (stderr) {
-          console.log(chalk.red(`Error: ${stderr}`));
-          return;
-        }
-        console.log(chalk.green(`Success: ${stdout}`));
+      (err) => {
+        if (err) return this.error();
+        exec('node dist/talaria-generated.js', (err) => {
+          if (err) return this.error();
+          unlink('dist/talaria-generated.js', (err) => {
+            if (err) return this.error();
+            spinner.stop();
+            console.log(chalk.green('Project built successfully!'));
+          });
+        });
       }
     );
+  };
+
+  static error = () => {
+    spinner.stop();
+    console.error(chalk.red('Error building project'));
   };
 }
