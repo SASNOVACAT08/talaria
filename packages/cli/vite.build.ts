@@ -8,9 +8,9 @@ export default defineConfig({
     minify: false,
     lib: {
       entry: 'src/index.ts',
-      name: 'simple-email',
+      name: 'talaria-generated',
       formats: ['es'],
-      fileName: 'simple-email',
+      fileName: 'talaria-generated',
     },
     rollupOptions: {
       external: ['@talaria/render', '@talaria/components', 'vue'],
