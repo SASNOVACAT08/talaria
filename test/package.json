@@ -1,5 +1,5 @@
 {
-  "name": "@talaria/test",
+  "name": "@tlra/test",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .ts .",

@@ -1,6 +1,6 @@
 # @tlra/cli
 
-## 0.0.1
+## 0.1.0
 
 ### Patch Changes
 

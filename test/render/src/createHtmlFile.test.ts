@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { createHtmlFile } from '@talaria/render';
+import { createHtmlFile } from '@tlra/render';
 import { existsSync, unlinkSync } from 'fs';
 
 describe('createHtmlFile', () => {

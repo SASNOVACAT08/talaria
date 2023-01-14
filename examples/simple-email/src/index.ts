@@ -1,4 +1,4 @@
-import { render, RenderOutput } from '@talaria/render';
+import { render, RenderOutput } from '@tlra/render';
 import Mail from './Mail.vue';
 
 const main = async () => {
