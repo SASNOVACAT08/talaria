@@ -4,6 +4,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "release": "changeset publish",
     "build": "nx run-many --target=build --projects=@talaria/cli,@talaria/render,@talaria/components --parallel",
     "lint:all": "pnpm run lint:packages && pnpm run lint:test && pnpm run lint:examples && pnpm run lint:docs",
     "lint:packages": "nx run-many --target=lint --all --parallel",
