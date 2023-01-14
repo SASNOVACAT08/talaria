@@ -9,7 +9,7 @@
     "lint:packages": "nx run-many --target=lint --all --parallel",
     "lint:test": "cd test && pnpm run lint",
     "lint:examples": "cd examples && pnpm run lint",
-    "lint:docs": "eslint --ext .ts docs",
+    "lint:docs": "eslint docs/.vitepress  --ext .ts",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
