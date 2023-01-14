@@ -67,7 +67,7 @@
   "exclude": [
     "node_modules",
     "dist",
-    "vite.build.ts",
-    "vite.dev.ts"
+    "vite.dev.ts",
+    "src/templates/**"
   ]
 }

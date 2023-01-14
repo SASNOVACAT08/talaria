@@ -8,7 +8,7 @@
   },
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc && cp -r ./src/templates ./dist/templates"
   },
   "author": "",
   "license": "ISC",
