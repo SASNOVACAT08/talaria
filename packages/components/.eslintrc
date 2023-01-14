@@ -1,0 +1,22 @@
+{
+  "root": true,
+  "env": {
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:vue/vue3-recommended",
+    "@vue/typescript/recommended",
+    "plugin:prettier/recommended",
+    "@vue/prettier"
+  ],
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "ecmaVersion": 2020
+  },
+  "plugins": ["@typescript-eslint", "vue", "prettier"],
+  "rules": {
+    "vue/multi-word-component-names": "off"
+  }
+}

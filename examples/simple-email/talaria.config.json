@@ -1,0 +1,9 @@
+{
+  "send": {
+    "service": "gmail",
+    "auth": {
+      "user": "username",
+      "pass": "password"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@talaria/test-render",
+  "private": true,
+  "scripts": {
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@talaria/render": "workspace:*",
+    "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.4",
+    "vitest": "^0.26.3"
+  }
+}
