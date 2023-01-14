@@ -3,7 +3,6 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "vite build",
     "build:talaria": "vue-tsc && talaria build"
   },
   "dependencies": {
