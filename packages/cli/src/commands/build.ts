@@ -1,6 +1,10 @@
 import chalk from 'chalk';
 import { exec } from 'child_process';
 import { unlink } from 'fs';
+import { build } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import typescript2 from 'rollup-plugin-typescript2';
+import commonjs from '@rollup/plugin-commonjs';
 import spinner from '../utils/spinner';
 
 export default class Build {
@@ -13,10 +17,37 @@ export default class Build {
 
   static handler = () => {
     spinner.start('Building project');
-    exec(
-      './node_modules/.bin/vite build --config ./node_modules/@talaria/cli/vite.build.ts',
-      (err) => {
-        if (err) return this.error();
+    build({
+      logLevel: 'silent',
+      build: {
+        minify: false,
+        lib: {
+          entry: 'src/index.ts',
+          name: 'talaria-generated',
+          formats: ['es'],
+          fileName: 'talaria-generated',
+        },
+        rollupOptions: {
+          external: ['@talaria/render', '@talaria/components', 'vue'],
+          output: {
+            globals: {
+              vue: 'Vue',
+              '@talaria/render': 'render',
+              '@talaria/components': 'components',
+            },
+          },
+        },
+      },
+      plugins: [
+        vue(),
+        typescript2({
+          check: false,
+          include: ['src/**/*.ts', 'src/**/*.vue'],
+        }),
+        commonjs(),
+      ],
+    })
+      .then(() => {
         exec('node dist/talaria-generated.js', (err) => {
           if (err) return this.error();
           unlink('dist/talaria-generated.js', (err) => {
@@ -25,8 +56,8 @@ export default class Build {
             console.log(chalk.green('Project built successfully!'));
           });
         });
-      }
-    );
+      })
+      .catch(() => this.error());
   };
 
   static error = () => {
