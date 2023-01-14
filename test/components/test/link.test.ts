@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { Link } from '@talaria/components';
+import { Link } from '@tlra/components';
 import { mount } from '@vue/test-utils';
 
 describe('Link.vue', () => {

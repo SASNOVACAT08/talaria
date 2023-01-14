@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { defineComponent, inject } from 'vue';
-import { generateEmail } from '@talaria/render';
+import { generateEmail } from '@tlra/render';
 
 describe('generateEmail', () => {
   it('should render', async () => {

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Html, Body } from '@talaria/components';
+import { Html, Body } from '@tlra/components';
 import { defineComponent, inject } from 'vue';
 defineComponent({
   components: {

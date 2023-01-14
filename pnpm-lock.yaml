@@ -42,16 +42,16 @@ importers:
 
   examples/simple-email:
     specifiers:
-      '@talaria/cli': workspace:*
-      '@talaria/components': workspace:*
-      '@talaria/render': workspace:*
+      '@tlra/cli': workspace:*
+      '@tlra/components': workspace:*
+      '@tlra/render': workspace:*
       typescript: ^4.9.4
       vue: ^3.2.45
       vue-tsc: ^1.0.11
     dependencies:
-      '@talaria/cli': link:../../packages/cli
-      '@talaria/components': link:../../packages/components
-      '@talaria/render': link:../../packages/render
+      '@tlra/cli': link:../../packages/cli
+      '@tlra/components': link:../../packages/components
+      '@tlra/render': link:../../packages/render
       vue: 3.2.45
     devDependencies:
       typescript: 4.9.4
@@ -142,14 +142,14 @@ importers:
 
   test/components:
     specifiers:
-      '@talaria/components': workspace:*
+      '@tlra/components': workspace:*
       '@vitejs/plugin-vue': ^4.0.0
       '@vue/test-utils': ^2.2.7
       happy-dom: ^8.1.2
       typescript: ^4.9.4
       vitest: ^0.26.3
     dependencies:
-      '@talaria/components': link:../../packages/components
+      '@tlra/components': link:../../packages/components
     devDependencies:
       '@vitejs/plugin-vue': 4.0.0_vite@4.0.4+vue@3.2.45
       '@vue/test-utils': 2.2.7_vue@3.2.45
@@ -159,12 +159,12 @@ importers:
 
   test/render:
     specifiers:
-      '@talaria/render': workspace:*
+      '@tlra/render': workspace:*
       typescript: ^4.9.4
       vitest: ^0.26.3
       vue: ^3.2.45
     dependencies:
-      '@talaria/render': link:../../packages/render
+      '@tlra/render': link:../../packages/render
       vue: 3.2.45
     devDependencies:
       typescript: 4.9.4

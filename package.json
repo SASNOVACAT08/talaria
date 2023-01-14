@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "release": "changeset publish",
-    "build": "nx run-many --target=build --projects=@talaria/cli,@talaria/render,@talaria/components --parallel",
+    "build": "nx run-many --target=build --projects=@tlra/cli,@tlra/render,@tlra/components --parallel",
     "lint:all": "pnpm run lint:packages && pnpm run lint:test && pnpm run lint:examples && pnpm run lint:docs",
     "lint:packages": "nx run-many --target=lint --all --parallel",
     "lint:test": "cd test && pnpm run lint",
