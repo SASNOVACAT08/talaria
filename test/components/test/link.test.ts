@@ -7,7 +7,7 @@ describe('Link.vue', () => {
     const wrapper = mount(Link);
     const html = wrapper.html().trim().replace(/\n/g, '');
     expect(html).toBe(
-      '<a href="#" target="_blank" style="color: inherit; text-decoration: none;"></a>'
+      '<a rel="noreferrer" href="#" target="_blank" style="color: inherit; text-decoration: none;"></a>'
     );
   });
 
@@ -19,7 +19,7 @@ describe('Link.vue', () => {
     });
     const html = wrapper.html().trim().replace(/\n/g, '');
     expect(html).toBe(
-      '<a href="https://talaria.email" target="_blank" style="color: inherit; text-decoration: none;"></a>'
+      '<a rel="noreferrer" href="https://talaria.email" target="_blank" style="color: inherit; text-decoration: none;"></a>'
     );
   });
 
@@ -33,7 +33,7 @@ describe('Link.vue', () => {
     });
     const html = wrapper.html().trim().replace(/\n/g, '');
     expect(html).toBe(
-      '<a href="#" target="_blank" style="color: red; text-decoration: none;"></a>'
+      '<a rel="noreferrer" href="#" target="_blank" style="color: red; text-decoration: none;"></a>'
     );
   });
 
@@ -44,5 +44,17 @@ describe('Link.vue', () => {
       },
     });
     expect(wrapper.text()).toContain('Hello World');
+  });
+
+  it('should render with custom rel', () => {
+    const wrapper = mount(Link, {
+      props: {
+        rel: 'nofollow noreferrer',
+      },
+    });
+    const html = wrapper.html().trim().replace(/\n/g, '');
+    expect(html).toBe(
+      '<a rel="nofollow noreferrer" href="#" target="_blank" style="color: inherit; text-decoration: none;"></a>'
+    );
   });
 });
