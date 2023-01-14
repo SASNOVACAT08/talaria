@@ -1,4 +1,4 @@
-# @talaria/cli
+# @tlra/cli
 
 ## 0.0.1
 

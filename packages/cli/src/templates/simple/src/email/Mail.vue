@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Html } from '@talaria/components';
+import { Html } from '@tlra/components';
 import { defineComponent } from 'vue';
 
 defineComponent({
