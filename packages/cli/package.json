@@ -1,6 +1,6 @@
 {
   "name": "@tlra/cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "dist/index.js",
   "bin": {
@@ -13,20 +13,20 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@rollup/plugin-commonjs": "^24.0.0",
+    "@vitejs/plugin-vue": "^4.0.0",
     "chalk": "^4.1.2",
     "cli-spinners": "^2.7.0",
     "nodemailer": "^6.8.0",
+    "rollup-plugin-typescript2": "^0.34.1",
     "ora": "^5.4.1",
+    "vite": "^4.0.4",
     "yargs": "^17.6.2"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^24.0.0",
     "@types/node": "^18.11.18",
     "@types/nodemailer": "^6.4.7",
     "@types/yargs": "^17.0.19",
-    "@vitejs/plugin-vue": "^4.0.0",
-    "rollup-plugin-typescript2": "^0.34.1",
-    "typescript": "^4.9.4",
-    "vite": "^4.0.4"
+    "typescript": "^4.9.4"
   }
 }
