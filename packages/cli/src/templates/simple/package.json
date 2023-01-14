@@ -6,9 +6,9 @@
     "build:talaria": "vue-tsc && talaria build"
   },
   "dependencies": {
-    "@talaria/cli": "^0.0.1",
-    "@talaria/components": "^0.0.1",
-    "@talaria/render": "^0.0.1",
+    "@tlra/cli": "^0.0.1",
+    "@tlra/components": "^0.0.1",
+    "@tlra/render": "^0.0.1",
     "vue": "^3.2.45"
   },
   "devDependencies": {

@@ -28,12 +28,12 @@ export default class Build {
           fileName: 'talaria-generated',
         },
         rollupOptions: {
-          external: ['@talaria/render', '@talaria/components', 'vue'],
+          external: ['@tlra/render', '@tlra/components', 'vue'],
           output: {
             globals: {
               vue: 'Vue',
-              '@talaria/render': 'render',
-              '@talaria/components': 'components',
+              '@tlra/render': 'render',
+              '@tlra/components': 'components',
             },
           },
         },

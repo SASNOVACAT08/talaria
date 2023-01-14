@@ -29,7 +29,7 @@ export default class Send {
         alias: 's',
         describe: 'Subject of the email',
         type: 'string',
-        default: 'Email sent with @talaria/cli',
+        default: 'Email sent with @tlra/cli',
       })
       .option('config', {
         alias: 'c',
