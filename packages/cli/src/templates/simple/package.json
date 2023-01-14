@@ -1,15 +1,14 @@
 {
-  "name": "simple-email",
+  "name": "simple",
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "vite build",
     "build:talaria": "vue-tsc && talaria build"
   },
   "dependencies": {
-    "@talaria/cli": "workspace:*",
-    "@talaria/components": "workspace:*",
-    "@talaria/render": "workspace:*",
+    "@talaria/cli": "^0.0.1",
+    "@talaria/components": "^0.0.1",
+    "@talaria/render": "^0.0.1",
     "vue": "^3.2.45"
   },
   "devDependencies": {

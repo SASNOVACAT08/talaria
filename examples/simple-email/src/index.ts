@@ -9,7 +9,7 @@ const main = async () => {
     template: Mail,
     config: {
       output: RenderOutput.FILE,
-      path: 'index',
+      path: './dist/index',
     },
   });
   console.log(i);
