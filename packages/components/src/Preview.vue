@@ -8,10 +8,10 @@ defineProps({
   },
 });
 
-const renderWhiteSpace = (text: string) => {
+function renderWhiteSpace(text: string) {
   const whiteSpaceCodes = '\xa0\u200C\u200B\u200D\u200E\u200F\uFEFF';
   return whiteSpaceCodes.repeat(150 - text.length);
-};
+}
 
 // Get default slot text
 const slotText = computed(() => {
