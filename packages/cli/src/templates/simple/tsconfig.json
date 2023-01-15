@@ -12,5 +12,5 @@
     "noEmit": true,
     "resolveJsonModule": true
   },
-  "include": ["src/**/*.ts", "src/**/*.vue"]
+  "include": ["src/**/*.ts", "src/**/*.vue", "types/**/*.d.ts"]
 }
