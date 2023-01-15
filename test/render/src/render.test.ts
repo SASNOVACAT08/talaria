@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { render, RenderOutput } from '@talaria/render';
+import { render, RenderOutput } from '@tlra/render';
 import { readFileSync, unlinkSync } from 'fs';
 import { defineComponent, inject } from 'vue';
 

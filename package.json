@@ -4,11 +4,13 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "release": "changeset publish",
+    "build": "nx run-many --target=build --projects=@tlra/cli,@tlra/render,@tlra/components --parallel",
     "lint:all": "pnpm run lint:packages && pnpm run lint:test && pnpm run lint:examples && pnpm run lint:docs",
     "lint:packages": "nx run-many --target=lint --all --parallel",
     "lint:test": "cd test && pnpm run lint",
     "lint:examples": "cd examples && pnpm run lint",
-    "lint:docs": "eslint --ext .ts docs",
+    "lint:docs": "eslint docs/.vitepress  --ext .ts",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
@@ -17,9 +19,11 @@
     "commitlint": "commitlint",
     "cz": "cz",
     "lint-staged": "lint-staged",
+    "changeset": "changeset",
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.0",
     "@commitlint/cli": "^17.4.0",
     "@commitlint/config-conventional": "^17.4.0",
     "@nrwl/nx-cloud": "^15.0.2",

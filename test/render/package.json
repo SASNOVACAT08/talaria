@@ -1,11 +1,11 @@
 {
-  "name": "@talaria/test-render",
+  "name": "@tlra/test-render",
   "private": true,
   "scripts": {
     "test": "vitest"
   },
   "dependencies": {
-    "@talaria/render": "workspace:*",
+    "@tlra/render": "workspace:*",
     "vue": "^3.2.45"
   },
   "devDependencies": {
