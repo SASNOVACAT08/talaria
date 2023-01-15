@@ -1,0 +1,7 @@
+// Vitest Snapshot v1
+
+exports[`Hr.vue > should render by default 1`] = `"<hr style=\\"width: 100%; border-style: solid none none; border-image: initial; border-top-width: 1px; border-right-width: initial; border-bottom-width: initial; border-left-width: initial; border-top-color: #eaeaea; border-right-color: initial; border-bottom-color: initial; border-left-color: initial;\\" v-bind=\\"[object Object]\\">"`;
+
+exports[`Hr.vue > should render with custom class 1`] = `"<hr style=\\"width: 100%; border-style: solid none none; border-image: initial; border-top-width: 1px; border-right-width: initial; border-bottom-width: initial; border-left-width: initial; border-top-color: #eaeaea; border-right-color: initial; border-bottom-color: initial; border-left-color: initial;\\" v-bind=\\"[object Object]\\" class=\\"custom-class\\">"`;
+
+exports[`Hr.vue > should render with custom style 1`] = `"<hr style=\\"width: 100%; border-style: solid none none; border-image: initial; border-top-width: 1px; border-right-width: initial; border-bottom-width: initial; border-left-width: initial; border-top-color: #eaeaea; border-right-color: initial; border-bottom-color: initial; border-left-color: initial; color: red;\\" v-bind=\\"[object Object]\\">"`;
