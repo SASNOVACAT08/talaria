@@ -1,5 +1,11 @@
 # @tlra/cli
 
+## 0.1.3
+
+### Patch Changes
+
+- fix types, added in tsconfig
+
 ## 0.1.2
 
 ### Patch Changes

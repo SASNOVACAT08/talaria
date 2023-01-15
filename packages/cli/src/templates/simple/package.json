@@ -3,10 +3,10 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build:talaria": "vue-tsc && talaria build"
+    "build": "vue-tsc && talaria build"
   },
   "dependencies": {
-    "@tlra/cli": "^0.1.2",
+    "@tlra/cli": "^0.1.3",
     "@tlra/components": "^0.2.0",
     "@tlra/render": "^0.1.0",
     "vue": "^3.2.45"
