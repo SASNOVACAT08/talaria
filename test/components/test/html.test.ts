@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { Html } from '@talaria/components';
+import { Html } from '@tlra/components';
 import { mount } from '@vue/test-utils';
 
 describe('Html.vue', () => {

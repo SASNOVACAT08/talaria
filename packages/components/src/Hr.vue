@@ -13,7 +13,6 @@ defineProps({
 
 <template>
   <hr
-    ref="forwardedRef"
     :style="{
       width: '100%',
       border: 'none',

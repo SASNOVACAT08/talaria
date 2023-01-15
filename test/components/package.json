@@ -1,11 +1,11 @@
 {
-  "name": "@talaria/test-components",
+  "name": "@tlra/test-components",
   "private": true,
   "scripts": {
     "test": "vitest"
   },
   "dependencies": {
-    "@talaria/components": "workspace:*"
+    "@tlra/components": "workspace:*"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
