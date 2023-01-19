@@ -3,8 +3,8 @@ import { renderToString } from 'vue/server-renderer';
 import { RenderData } from '../interfaces';
 
 const generateEmail = async (
-  data: RenderData,
-  template: Component
+  template: Component,
+  data?: RenderData
 ): Promise<string> => {
   const app = createSSRApp(template);
   for (const key in data) {

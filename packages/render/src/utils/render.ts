@@ -3,7 +3,7 @@ import { createHtmlFile } from './createHtmlFile';
 import { generateEmail } from './generateEmail';
 
 const render = async (options: RenderOptions): Promise<string> => {
-  const email = await generateEmail(options.data, options.template);
+  const email = await generateEmail(options.template, options.data);
   switch (options.config.output) {
     case 'file':
       if (!options.config.path)
