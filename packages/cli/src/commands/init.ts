@@ -37,7 +37,7 @@ export default class Init {
     );
     const templatePath = path.join(cliPath, argv.template);
     cp(templatePath, argv.name, { recursive: true }, (err) => {
-      if (err) return this.error();
+      if (err) this.error();
       spinner.stop();
       console.log(chalk.green('Project initialized successfully!'));
     });
@@ -46,5 +46,6 @@ export default class Init {
   static error = () => {
     spinner.stop();
     console.error(chalk.red('Error building project'));
+    process.exit(1);
   };
 }

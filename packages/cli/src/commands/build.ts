@@ -49,9 +49,9 @@ export default class Build {
     })
       .then(() => {
         exec('node dist/talaria-generated.js', (err) => {
-          if (err) return this.error();
+          if (err) this.error();
           unlink('dist/talaria-generated.js', (err) => {
-            if (err) return this.error();
+            if (err) this.error();
             spinner.stop();
             console.log(chalk.green('Project built successfully!'));
           });
@@ -63,5 +63,6 @@ export default class Build {
   static error = () => {
     spinner.stop();
     console.error(chalk.red('Error building project'));
+    process.exit(1);
   };
 }
