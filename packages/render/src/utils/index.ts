@@ -1,5 +1,3 @@
-import { render } from './render';
-import { createHtmlFile } from './createHtmlFile';
-import { generateEmail } from './generateEmail';
-
-export { render, createHtmlFile, generateEmail };
+export { render } from './render';
+export { createHtmlFile } from './createHtmlFile';
+export { generateEmail } from './generateEmail';
