@@ -1,3 +1,1 @@
-import { RenderOutput } from './RenderOutput';
-
-export { RenderOutput };
+export { RenderOutput } from './RenderOutput';
