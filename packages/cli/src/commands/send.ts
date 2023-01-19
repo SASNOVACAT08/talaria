@@ -53,10 +53,10 @@ export default class Send {
           html,
         },
         (err) => {
-          spinner.stop();
           if (err) {
-            console.error(chalk.red('Error sending email'));
+            this.error('Error sending email');
           } else {
+            spinner.stop();
             console.log(
               chalk.green(`Email sent to ${chalk.yellow(argv.email)}`)
             );
@@ -66,11 +66,17 @@ export default class Send {
     } catch (err) {
       if (err instanceof Error) {
         if (err.message.includes(argv.config))
-          console.error(chalk.red(`Config file not found: ${argv.config}`));
+          this.error(`Config file not found: ${argv.config}`);
         else if (err.message.includes(argv.path))
-          console.error(chalk.red(`Email file not found: ${argv.path}`));
-        else console.error(chalk.red(err.message));
+          this.error(`Email file not found: ${argv.path}`);
+        else this.error(err.message);
       }
     }
+  };
+
+  static error = (msg: string) => {
+    spinner.stop();
+    console.error(chalk.red(msg));
+    process.exit(1);
   };
 }
