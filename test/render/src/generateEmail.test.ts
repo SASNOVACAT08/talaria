@@ -8,7 +8,7 @@ describe('generateEmail', () => {
       template: '<div>Hello World</div>',
     });
     console.log(component);
-    const rendered = await generateEmail({}, component);
+    const rendered = await generateEmail(component);
     expect(rendered).toBe('<div>Hello World</div>');
   });
 
@@ -20,12 +20,9 @@ describe('generateEmail', () => {
       },
       template: '<div>{{ msg }}</div>',
     });
-    const rendered = await generateEmail(
-      {
-        msg: 'Hello World',
-      },
-      component
-    );
+    const rendered = await generateEmail(component, {
+      msg: 'Hello World',
+    });
     expect(rendered).toBe('<div>Hello World</div>');
   });
 });
