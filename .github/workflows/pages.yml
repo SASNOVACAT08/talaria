@@ -1,9 +1,11 @@
 name: Github Pages
 
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ['CI']
+    branches: [main]
+    types:
+      - completed
 
 jobs:
   deploy:
@@ -20,7 +22,7 @@ jobs:
         with:
           node-version: 16
           cache: pnpm
-      - run: pnpm install
+      - run: pnpm install --frozen-lockfile
 
       - name: Build
         run: pnpm run docs:build

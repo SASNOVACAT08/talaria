@@ -1,9 +1,11 @@
 name: Version
 
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ['CI']
+    branches: [main]
+    types:
+      - completed
 
 jobs:
   release:
@@ -20,16 +22,10 @@ jobs:
         with:
           node-version: 16
           cache: pnpm
-      - run: pnpm install
+      - run: pnpm install --frozen-lockfile
 
       - name: Build
         run: pnpm run build
-
-      - name: Eslint
-        run: pnpm run lint:all
-
-      - name: Test
-        run: pnpm run test
 
       - name: Release
         id: changesets
