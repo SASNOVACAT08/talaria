@@ -1,6 +1,10 @@
-name: Pull Request
+name: CI
 
-on: [pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
 
 jobs:
   ci:
@@ -17,13 +21,13 @@ jobs:
         with:
           node-version: 16
           cache: pnpm
-      - run: pnpm install
+      - run: pnpm install --frozen-lockfile
 
       - name: Build
         run: pnpm run build
 
       - name: Eslint
-        run: pnpm run lint:all
+        run: pnpm run lint
 
       - name: Test
         run: pnpm run test
