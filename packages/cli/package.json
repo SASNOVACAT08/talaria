@@ -20,7 +20,7 @@
     "nodemailer": "^6.8.0",
     "rollup-plugin-typescript2": "^0.34.1",
     "ora": "^5.4.1",
-    "vite": "^4.0.4",
+    "vite": "^4.0.5",
     "yargs": "^17.6.2"
   },
   "devDependencies": {
