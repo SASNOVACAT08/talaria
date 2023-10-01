@@ -1,0 +1,17 @@
+{
+  "name": "@tlra/test-components",
+  "private": true,
+  "scripts": {
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@tlra/components": "workspace:*"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vue/test-utils": "^2.2.7",
+    "happy-dom": "^8.1.2",
+    "typescript": "^4.9.4",
+    "vitest": "^0.26.3"
+  }
+}

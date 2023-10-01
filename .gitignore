@@ -33,6 +33,7 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+coverage/
 
 # System Files
 .DS_Store
@@ -40,3 +41,6 @@ Thumbs.db
 
 # VitePress
 cache
+
+# NX Cloud
+nx-cloud.env

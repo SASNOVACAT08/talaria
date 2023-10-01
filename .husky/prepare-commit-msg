@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+if [ "$2" = "message" ]; then 
+  exit 0 
+fi 
+exec < /dev/tty && pnpm run cz --hook || true

@@ -1,0 +1,5 @@
+// Vitest Snapshot v1
+
+exports[`Container.vue > should render by default 1`] = `"<div v-html=\\"&lt;!--[if mso | IE]&gt;&lt;table role=&#x27;presentation&#x27; width=&#x27;100%&#x27; align=&#x27;center&#x27; style=maxWidth:37.5em;&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td style=&#x27;width:37.5em;background:#ffffff&#x27;&gt;&lt;![endif]--&gt;\\"></div><div style=\\"max-width: 37.5em;\\"></div><div v-html=\\"&lt;!--[if mso | IE]&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;![endif]--&gt;\\"></div>"`;
+
+exports[`Container.vue > should render with custom style 1`] = `"<div v-html=\\"&lt;!--[if mso | IE]&gt;&lt;table role=&#x27;presentation&#x27; width=&#x27;100%&#x27; align=&#x27;center&#x27; style=maxWidth:37.5em;color:red;&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td style=&#x27;width:37.5em;background:#ffffff&#x27;&gt;&lt;![endif]--&gt;\\"></div><div style=\\"max-width: 37.5em; color: red;\\"></div><div v-html=\\"&lt;!--[if mso | IE]&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;![endif]--&gt;\\"></div>"`;
